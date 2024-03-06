@@ -1,0 +1,82 @@
+Attaching to ft_transcendance_test_db_1, ft_transcendance_test_web_1, ft_transcendance_test_nginx_1
+[36mdb_1     |[0m 
+[36mdb_1     |[0m PostgreSQL Database directory appears to contain a database; Skipping initialization
+[36mdb_1     |[0m 
+[32mweb_1    |[0m Waiting for postgres...
+[33mnginx_1  |[0m /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+[33mnginx_1  |[0m /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+[33mnginx_1  |[0m /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+[36mdb_1     |[0m 2024-03-06 16:15:50.135 UTC [1] LOG:  starting PostgreSQL 15.6 (Debian 15.6-1.pgdg120+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+[32mweb_1    |[0m PostgreSQL started
+[33mnginx_1  |[0m 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf is not a file or does not exist
+[36mdb_1     |[0m 2024-03-06 16:15:50.135 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+[36mdb_1     |[0m 2024-03-06 16:15:50.135 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+[32mweb_1    |[0m [2024-03-06 16:15:50 +0000] [1] [INFO] Starting gunicorn 21.2.0
+[36mdb_1     |[0m 2024-03-06 16:15:50.136 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[33mnginx_1  |[0m /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+[32mweb_1    |[0m [2024-03-06 16:15:50 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[32mweb_1    |[0m [2024-03-06 16:15:50 +0000] [1] [INFO] Using worker: sync
+[33mnginx_1  |[0m /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+[36mdb_1     |[0m 2024-03-06 16:15:50.139 UTC [29] LOG:  database system was interrupted; last known up at 2024-03-06 16:14:32 UTC
+[32mweb_1    |[0m [2024-03-06 16:15:50 +0000] [8] [INFO] Booting worker with pid: 8
+[36mdb_1     |[0m 2024-03-06 16:15:50.215 UTC [29] LOG:  database system was not properly shut down; automatic recovery in progress
+[36mdb_1     |[0m 2024-03-06 16:15:50.216 UTC [29] LOG:  redo starts at 0/19218C8
+[33mnginx_1  |[0m /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+[36mdb_1     |[0m 2024-03-06 16:15:50.217 UTC [29] LOG:  invalid record length at 0/195AD68: wanted 24, got 0
+[36mdb_1     |[0m 2024-03-06 16:15:50.217 UTC [29] LOG:  redo done at 0/195AD30 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+[36mdb_1     |[0m 2024-03-06 16:15:50.219 UTC [27] LOG:  checkpoint starting: end-of-recovery immediate wait
+[36mdb_1     |[0m 2024-03-06 16:15:50.223 UTC [27] LOG:  checkpoint complete: wrote 37 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.005 s; sync files=11, longest=0.001 s, average=0.001 s; distance=229 kB, estimate=229 kB
+[36mdb_1     |[0m 2024-03-06 16:15:50.226 UTC [1] LOG:  database system is ready to accept connections
+[33mnginx_1  |[0m /docker-entrypoint.sh: Configuration complete; ready for start up
+[33mnginx_1  |[0m 2024/03/06 16:15:50 [notice] 1#1: using the "epoll" event method
+[33mnginx_1  |[0m 2024/03/06 16:15:50 [notice] 1#1: nginx/1.25.4
+[33mnginx_1  |[0m 2024/03/06 16:15:50 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+[33mnginx_1  |[0m 2024/03/06 16:15:50 [notice] 1#1: OS: Linux 5.10.104-linuxkit
+[33mnginx_1  |[0m 2024/03/06 16:15:50 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+[33mnginx_1  |[0m 2024/03/06 16:15:50 [notice] 1#1: start worker processes
+[33mnginx_1  |[0m 2024/03/06 16:15:50 [notice] 1#1: start worker process 21
+[33mnginx_1  |[0m 2024/03/06 16:15:50 [notice] 1#1: start worker process 22
+[33mnginx_1  |[0m 2024/03/06 16:15:50 [notice] 1#1: start worker process 23
+[33mnginx_1  |[0m 2024/03/06 16:15:50 [notice] 1#1: start worker process 24
+[33mnginx_1  |[0m 2024/03/06 16:15:50 [notice] 1#1: start worker process 25
+[33mnginx_1  |[0m 2024/03/06 16:15:50 [notice] 1#1: start worker process 26
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 21#21: gracefully shutting down
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 23#23: gracefully shutting down
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 22#22: gracefully shutting down
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 24#24: gracefully shutting down
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 26#26: gracefully shutting down
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 22#22: exiting
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 23#23: exiting
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 24#24: exiting
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 26#26: exiting
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 23#23: exit
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 22#22: exit
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 26#26: exit
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 24#24: exit
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 25#25: gracefully shutting down
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 25#25: exiting
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 25#25: exit
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 1#1: worker process 23 exited with code 0
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 1#1: worker process 24 exited with code 0
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 1#1: worker process 25 exited with code 0
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 1#1: signal 29 (SIGIO) received
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 1#1: worker process 22 exited with code 0
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 1#1: worker process 26 exited with code 0
+[33mnginx_1  |[0m 2024/03/06 16:16:48 [notice] 1#1: signal 29 (SIGIO) received
+[33mft_transcendance_test_nginx_1 exited with code 137
+[0m[32mweb_1    |[0m [2024-03-06 16:16:58 +0000] [1] [INFO] Handling signal: term
+[32mweb_1    |[0m [2024-03-06 16:16:58 +0000] [8] [INFO] Worker exiting (pid: 8)
+[32mweb_1    |[0m [2024-03-06 16:16:58 +0000] [1] [INFO] Shutting down: Master
+[32mft_transcendance_test_web_1 exited with code 0
+[0m[36mdb_1     |[0m 2024-03-06 16:16:58.583 UTC [1] LOG:  received fast shutdown request
+[36mdb_1     |[0m 2024-03-06 16:16:58.585 UTC [1] LOG:  aborting any active transactions
+[36mdb_1     |[0m 2024-03-06 16:16:58.588 UTC [1] LOG:  background worker "logical replication launcher" (PID 32) exited with exit code 1
+[36mdb_1     |[0m 2024-03-06 16:16:58.591 UTC [27] LOG:  shutting down
+[36mdb_1     |[0m 2024-03-06 16:16:58.592 UTC [27] LOG:  checkpoint starting: shutdown immediate
+[36mdb_1     |[0m 2024-03-06 16:16:58.595 UTC [27] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.005 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=206 kB
+[36mdb_1     |[0m 2024-03-06 16:16:58.600 UTC [1] LOG:  database system is shut down
+[36mft_transcendance_test_db_1 exited with code 0
+[0m

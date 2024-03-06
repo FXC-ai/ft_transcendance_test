@@ -1,5 +1,7 @@
 version: '3.8'
 
+# For production !!!
+
 services:
   web:
     build: ./app
@@ -10,3 +12,16 @@ services:
       - 8000:8000
     env_file:
       - ./.env.dev
+    depends_on:
+      - db
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=ft_t_django
+      - POSTGRES_PASSWORD=ft_t_django
+      - POSTGRES_DB=ft_t_django_dev
+
+volumes:
+  postgres_data:
