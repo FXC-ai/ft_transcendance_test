@@ -11,4 +11,8 @@ then
     echo "PostgreSQL started"
 fi
 
+python manage.py migrate --noinput
+python manage.py collectstatic --no-input --clear
+
+# the command specified in the Dockerfile's CMD instruction or the command in a docker-compose.yml.
 exec "$@"
