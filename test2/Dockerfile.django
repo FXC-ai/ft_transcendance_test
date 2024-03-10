@@ -1,6 +1,6 @@
 FROM python:3.11.4-slim-buster as builder
 
-WORKDIR /usr/src
+WORKDIR /usr/backend
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends gcc
@@ -11,10 +11,10 @@ RUN pip install django
 RUN pip install gunicorn
 RUN pip install psycopg2-binary
 
-COPY src/. .
+COPY backend/. .
 
 RUN addgroup --system bck_django && adduser --system --group bck_django
-RUN chown -R bck_django:bck_django /usr/src
+RUN chown -R bck_django:bck_django /usr/backend
 
 USER bck_django
 
