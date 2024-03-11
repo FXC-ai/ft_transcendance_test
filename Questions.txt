@@ -1,0 +1,6 @@
+LE match making se fait sur :
+   - le jeu à 2 joureurs
+   - le jeu à 4 joureurs
+   - les 2
+
+Le Single page application : comment on fait ?

@@ -3,9 +3,8 @@ FROM nginx:1.25
 RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d
 
-RUN mkdir -p /var/frontend/
-COPY frontend/index.html /var/frontend/index.html
-COPY frontend/pong /var/frontend/pong/
-
+RUN mkdir -p /var/frontend/staticfiles/
+COPY frontend/staticfiles/index.html /var/frontend/staticfiles/index.html
+COPY frontend/staticfiles/pong/ /var/frontend/staticfiles/pong/
 
 CMD ["nginx", "-g", "daemon off;"]
