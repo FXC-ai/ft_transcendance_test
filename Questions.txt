@@ -4,3 +4,12 @@ LE match making se fait sur :
    - les 2
 
 Le Single page application : comment on fait ?
+
+# ENV SECRET_KEY foo  
+#ENV DJANGO_ALLOWED_HOSTS localhost 127.0.0.1 [::1]
+#ENV SQL_ENGINE django.db.backends.postgresql
+#ENV SQL_DATABASE db_bck_django
+#ENV SQL_USER bck_django
+#ENV SQL_PASSWORD bck_django
+#ENV SQL_HOST postgres
+#ENV SQL_PORT 5432

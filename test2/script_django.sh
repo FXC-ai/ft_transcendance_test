@@ -12,13 +12,7 @@ then
     echo "PostgreSQL started"
 fi
 
-echo "Hello World : je suis le script de démarrage"
-
-# env
-
 cd /usr/backend/
-
-# sleep 15
 
 python manage.py runserver 0.0.0.0:8000
 
