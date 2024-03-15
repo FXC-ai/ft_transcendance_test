@@ -1,0 +1,32 @@
+{% extends 'members_test_fx/base.html' %}
+
+{% block content %}
+
+<h1>Hello Django !  {% now "jS F Y H:i" %} </h1>
+<p>Liste des parties :</p>
+<ul>
+    <li>{{tab_members.0.name}} joue une {{tab_games.1.title}}</li>
+    <li>{{tab_members.1.name}} joue une {{tab_games.3.title}}</li>
+</ul>
+
+<p>Liste des membres :</p>
+{%for mem in tab_members %}
+{{ mem.name | upper}} {{mem.age}},  {{mem.surname}}, {{mem.connection_state}}/
+{%endfor%}
+
+<p>Liste des games :</p>
+{%for gam in tab_games %}
+{{ gam.title }} /
+{%endfor%}     
+
+<p>Liste des parties conditionnelles ppp:</p>
+{% for gam in tab_games %}
+    {% if 'au' in gam.title %}
+        Oulala...
+    {% else %}
+        Better...
+    {% endif %}
+    {{ gam.title }} /
+{% endfor %}
+
+{% endblock %}
