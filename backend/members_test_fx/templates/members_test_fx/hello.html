@@ -10,23 +10,31 @@
 </ul>
 
 <p>Liste des membres :</p>
+<ul>
 {%for mem in tab_members %}
-{{ mem.name | upper}} {{mem.age}},  {{mem.surname}}, {{mem.connection_state}}/
+<li><a href="{% url 'hello-details' mem.id %}">{{ mem.name | upper}}</a></li>
 {%endfor%}
+</ul>
 
 <p>Liste des games :</p>
+<ul>
 {%for gam in tab_games %}
-{{ gam.title }} /
+<li>{{ gam.title }} </li>
 {%endfor%}     
+</ul>
 
-<p>Liste des parties conditionnelles ppp:</p>
+<p>Liste des parties conditionnelles :</p>
+<ul>
 {% for gam in tab_games %}
+<li>
     {% if 'au' in gam.title %}
         Oulala...
     {% else %}
         Better...
     {% endif %}
-    {{ gam.title }} /
+    {{ gam.title }} 
+</li>
 {% endfor %}
+</ul>
 
 {% endblock %}

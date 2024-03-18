@@ -1,0 +1,25 @@
+{% extends 'members_test_fx/base.html' %}
+
+{% block content %}
+
+<form action="" method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Envoyer">
+</form>
+
+<p>Membre : {{ POST.name|upper }}</p>
+<ul>
+{% for k,v in POST.items %}
+<li>{{ k }} : {{ v }}</li>
+{% endfor %}
+</ul>
+
+<p>Liste des games :</p>
+{%for gam in tab_games %}
+{{ gam.title }} /
+{%endfor%}     
+
+
+
+{% endblock %}

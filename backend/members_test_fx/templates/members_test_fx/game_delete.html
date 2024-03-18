@@ -1,0 +1,12 @@
+{% extends 'members_test_fx/base.html' %}
+
+{% block content %}
+<h2>Le game à supprimer : {{ game.title }}</h2>
+
+
+<form action="" method="post">
+{% csrf_token %}
+<input type="submit" value="Supprimer">
+
+
+{% endblock %}

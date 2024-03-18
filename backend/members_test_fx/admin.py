@@ -10,4 +10,4 @@ class GamesAdmin(admin.ModelAdmin):
     list_display = ('title','members')
 
 admin.site.register(Members, MembersAdmin)
-admin.site.register(Games)
+admin.site.register(Games, GamesAdmin)

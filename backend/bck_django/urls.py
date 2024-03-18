@@ -20,6 +20,11 @@ from members_test_fx import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-	path('hello/', views.hello),
-	path('login/', views.login),
+	path('hello/', views.hello, name='hello'),
+    path('hello/<int:id>/', views.hello_details, name='hello-details'),
+	path('subscribe/', views.subscribe),
+	path('email-sent/', views.email_sent, name='email-sent'),
+	path('games/add/', views.game_create, name='games-create'),
+	path('games/<int:id>/change/', views.game_change, name='games-change'),
+	path('games/<int:id>/delete/', views.game_delete, name='games-delete'),
 ]
