@@ -8,11 +8,14 @@ services:
       dockerfile: Dockerfile.nginx
     restart: unless-stopped
     ports:
-      - 7890:80
+      - 80:80
+      - 443:443
     networks:
       - ft_transcendance
+    env_file: .env
     volumes:
-      - ./frontend/staticfiles/:/var/frontend/staticfiles/
+      - ./frontend/:/var/www/frontend/
+      - ./backend/staticfiles/:/var/www/backend/staticfiles/
 
   bck_django:
     container_name: bck_django
@@ -21,32 +24,20 @@ services:
       dockerfile: Dockerfile.django
     restart: on-failure
     ports:
-      - 8000
-    environment:
-      - SECRET_KEY=s'django-insecure-sm@b^=144g8k*vt7gc&&h7q3z7(yf4q=08mdikb=^lrr-18vz2'  
-      - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
-      - SQL_ENGINE=django.db.backends.postgresql
-      - SQL_DATABASE=db_bck_django
-      - SQL_USER=bck_django
-      - SQL_PASSWORD=bck_django
-      - SQL_HOST=postgres
-      - SQL_PORT=5432
-      - DATABASE=postgres
+      - 8000:8000
+    env_file: .env
     networks:
       - ft_transcendance
     volumes:
       - ./backend/:/usr/backend/
-    depends_on: 
+    depends_on:
       - postgres
 
   postgres:
     image: postgres:latest
-    environment:
-      - POSTGRES_USER=bck_django
-      - POSTGRES_PASSWORD=bck_django
-      - POSTGRES_DB=db_bck_django
+    env_file: .env
     ports:
-      - 5432
+      - 5432:5432
     networks:
       - ft_transcendance
     volumes:

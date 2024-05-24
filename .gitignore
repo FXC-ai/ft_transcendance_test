@@ -1,0 +1,10 @@
+.DS_Store
+env/
+daphne.sock
+daphne.sock.lock
+staticfiles/
+.env
+
+# Ignore all avatars except the default one
+backend/avatars/*
+!backend/avatars/avatar.png
