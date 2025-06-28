@@ -1114,8 +1114,6 @@ from members_test_fx.models import Games
 
 Il est possible de modifier l’apparence de la page :
 
-Avant :
-
 ![Screenshot 2024-03-16 at 17.34.28.png](https://github.com/FXC-ai/ft_transcendance_test/blob/main/Screenshot_2024-03-16_at_17.34.28%201.png)
 
 ```python
@@ -1128,10 +1126,6 @@ class GamesAdmin(admin.ModelAdmin):
 admin.site.register(Members, MembersAdmin)
 admin.site.register(Games, GamesAdmin)
 ```
-
-Après :
-
-![Screenshot 2024-03-16 at 17.34.28.png](ft_transcendance%2083c7088d594e4cfab43bcfa1f0d95b3d/Screenshot_2024-03-16_at_17.34.28%201.png)
 
 ## Le fichier form.py
 
