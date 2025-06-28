@@ -1116,7 +1116,7 @@ Il est possible de modifier l’apparence de la page :
 
 Avant :
 
-![Screenshot 2024-03-16 at 17.34.28.png](ft_transcendance%2083c7088d594e4cfab43bcfa1f0d95b3d/Screenshot_2024-03-16_at_17.34.28.png)
+![Screenshot 2024-03-16 at 17.34.28.png](https://github.com/FXC-ai/ft_transcendance_test/blob/main/Screenshot_2024-03-16_at_17.34.28%201.png)
 
 ```python
 class MembersAdmin(admin.ModelAdmin):
@@ -1844,7 +1844,7 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
 
 Tout d’abord il faut créer une nouvelle application dans notre profil intra. 
 
-[Getting started](https://api.intra.42.fr/apidoc/guides/getting_started)
+![Getting started](https://github.com/FXC-ai/ft_transcendance_test/blob/main/Screenshot_2024-04-28_at_10.38.53.png)
 
 ![Screenshot 2024-04-28 at 10.38.53.png](ft_transcendance%2083c7088d594e4cfab43bcfa1f0d95b3d/Screenshot_2024-04-28_at_10.38.53.png)
 
@@ -1943,7 +1943,7 @@ On lance les containers en mode dev avec la commande `docker-compose up —build
 - web contient tous les fichiers de l’app et est bind mount avec un volume
 - db fait tourner postgresSQL. Ce sont les settings de django qui se chargent de se connecter à la base de données. La DB est montés  avec un volume postgres_data
 
-![ft_transcendance_containers_dev.png](ft_transcendance%2083c7088d594e4cfab43bcfa1f0d95b3d/ft_transcendance_containers_dev.png)
+![ft_transcendance_containers_dev.png](https://github.com/FXC-ai/)
 
 Le serveur e
 
