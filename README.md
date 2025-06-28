@@ -7,7 +7,7 @@
 - [x]  Si vous choisissez d’inclure un backend, il doit être codé en pur Ruby.
 
 <aside>
-💡 PEUT ÊTRE **OUTREPASSÉ** PAR LE MODULE FRAMEWORK EN BACKEND
+💡 PEUT ÊTRE OUTREPASSÉ PAR LE MODULE FRAMEWORK EN BACKEND
 
 </aside>
 
@@ -16,7 +16,7 @@
 - [x]  Le frontend doit être développé en utilisant du Javascript natif (original sans framework ni extensions).
 
 <aside>
-💡 PEUT ÊTRE **OUTREPASSÉ** PAR LE MODULE FRONTEND
+💡 PEUT ÊTRE OUTREPASSÉ PAR LE MODULE FRONTEND
 
 </aside>
 
@@ -34,7 +34,7 @@
 - [x]  Les utilisateurs doivent pouvoir participer à une partie de Pong en temps réel contre un autre utilisateur directement sur le site web. Les 2 joueurs vont utiliser le même clavier.
 
 <aside>
-💡 PEUT ÊTRE **AMÉLIORÉ** PAR LE MODULE JOUEURS A DISTANCE.
+💡 PEUT ÊTRE AMÉLIORÉ PAR LE MODULE JOUEURS A DISTANCE.
 
 </aside>
 
@@ -42,7 +42,7 @@
 - [ ]  Un système d’inscription est requis : au début d’un tournoi, chaque joueur doit entrer son alias. Les alias seront réinitialisés lorsqu’un nouveau tournoi débute.
 
 <aside>
-💡 PEUT ÊTRE **MODIFIÉ** PAR LE MODULE DE GESTION DES UTILISATEURS.
+💡 PEUT ÊTRE MODIFIÉ PAR LE MODULE DE GESTION DES UTILISATEURS.
 
 </aside>
 
@@ -51,7 +51,7 @@
 - [ ]  Le jeu en soi doit être développé en respectant les mêmes contraintes par défaut que le Frontend (javascript natif sans framework ni extension)
 
 <aside>
-💡 PEUT ÊTRE **OUTREPASSÉ** PAR LE MODULE FRONTEND.
+💡 PEUT ÊTRE OUTREPASSÉ PAR LE MODULE FRONTEND.
 
 </aside>
 
